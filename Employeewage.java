@@ -3,15 +3,21 @@ package com.day3;
 public class Employeewage {
 
 	public static void main(String[] args) {
-		System.out.println("Welcome to Attendence");
+		// constant
+		int Full_Time = 1;
+		int Emp_Rate_per_Hr = 20;
+		// variables
+		int empHrs = 0;
+		int empWadge = 0;
 
-		int Attendance = 1;
-		double randomCheck = (Math.floor(Math.random() * 10)) % 2;
-		int check = 0;
-		if (check == Attendance) {
-			System.out.println("Employee is present");
-		} else {
-			System.out.println("Employee is Absent");
-		}
+		double empCheck = Math.floor(Math.random() * 10) % 2;
+		if (empCheck == Full_Time)
+			empHrs = 8;
+		else
+
+			empHrs = 0;
+		empWadge = empHrs * Emp_Rate_per_Hr;
+		System.out.println("emp wedge: " + empWadge);
+
 	}
 }
