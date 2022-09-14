@@ -2,22 +2,28 @@ package com.day3;
 
 public class Employeewage {
 
+	public static final int Part_time = 1;
+	public static final int Full_time = 2;
+	public static final int Emp_rate_per_Hrs = 20;
+
 	public static void main(String[] args) {
-		int Part_Time = 1;
-		int Full_Time = 2;
-		int Emp_Rate_per_Hrs = 20;
 
 		int empHrs = 0;
-		int empWedge = 0;
-		double empCheck = Math.floor(Math.random() * 10) % 3;
-		if (empCheck == Part_Time)
+		int empwage = 0;
+		
+		int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+		switch (empCheck) {
+		case Part_time:
 			empHrs = 4;
-		else if (empCheck == Full_Time)
+			break;
+		case Full_time:
 			empHrs = 8;
-		else
+			break;
+		default:
 			empHrs = 0;
-		empWedge = empHrs * Emp_Rate_per_Hrs;
-		System.out.println("Emp Wdge:" + empWedge);
+		}
+		empwage = empHrs * Emp_rate_per_Hrs;
+		System.out.println("Employee wage:" + empwage);
 
 	}
 }
